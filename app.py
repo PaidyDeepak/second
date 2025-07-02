@@ -23,7 +23,7 @@ st.sidebar.title("🔗 Input Settings")
 st.sidebar.markdown("### Example:")
 st.sidebar.markdown("- https://news.un.org/en/story/2025/07/1165146")
 urls = [st.sidebar.text_input(f"URL {i+1}", "") for i in range(3)]
-
+chunk_size = st.sidebar.slider("🧩 Chunk Size", 300, 1500,0, step=100)
 process_btn = st.sidebar.button("🚀 Process")
 
 VECTORSTORE_PATH = "faiss_index.pkl"
